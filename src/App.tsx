@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h3>Workout Log</h3>
       </header>
+      <div id="container">
+        <div className="Insert">Insert an item</div>
+        <form action="">
+          <div>
+            <input className="input-height" type="number" name="hrs" id="fhrs"/>
+          </div>
+          <select name="sport" id="fsport">
+            <option value="Run">Run</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Bike">Bike</option>
+          </select>
+          <input className="input-height" type="date" name="data" id="fdata"/>
+          <div>
+            <button className="add">Add</button>
+          </div>
+        </form>
+        <hr/>
+      </div>
     </div>
   );
 }
